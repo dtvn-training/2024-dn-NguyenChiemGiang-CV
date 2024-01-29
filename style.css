@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background: lightslategray;
+
+  min-height: 100vh;
+  margin: 10px 10%;
+}
+.container {
+  min-height: 100vh;
+}
+.info-profile,
+.content {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.2);
+}
+.content {
+  min-height: 100vh;
+}
+.info-profile {
+  background: rgb(228, 234, 240);
+}
+
+@media (max-width: 576px) {
+  .info-profile{
+    display: block;
+  }
+
+}
