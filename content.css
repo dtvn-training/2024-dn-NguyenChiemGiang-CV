@@ -1,4 +1,3 @@
-
 .content .left {
   position: relative;
   background: rgb(228, 234, 240);
@@ -22,7 +21,7 @@
 .experience-item :hover,
 .skills-item :hover,
 .education-item :hover,
-.language-item :hover{
+.language-item :hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
@@ -60,6 +59,9 @@
   flex-direction: column;
   padding: 5px;
 }
+.profile .profile-image {
+  animation: slideLeft 2.5s ease;
+}
 /* left-content */
 .content .left-content {
   padding-left: 10px;
@@ -70,23 +72,22 @@
   background: #fff;
   border-radius: 10px 0px 0px 10px;
   box-shadow: -4px -4px 2px rgb(0, 0, 0, 0.4);
-  min-height: 100vh;
+  min-height: 130vh;
 }
 .content-about-me,
 .content-skills {
   margin-left: 16px;
 }
 .content-about-me span {
-  font-size: 16px;
+  font-size: 19px;
 }
-.content-language{
+.content-language {
   margin-left: 24px;
 }
-.content-language .skill-info p{
+.content-language .skill-info p {
   font-size: 24px;
   font-weight: 700;
   margin: 8px;
-  
 }
 
 .skill-bar .skill-info {
@@ -117,72 +118,64 @@
   animation: toeic 3s;
 }
 
-
 /* box */
 
-.content-skills{
+.content-skills {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.box{
+.box {
   position: relative;
-  margin:10px 0;
+  margin: 10px 0;
   flex: 1 1 15rem;
 }
-.circle{
+.circle {
   width: 100%;
   height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.box .logo{
+.box .logo {
   text-align: center;
   font-size: 1rem;
-
 }
-.box .logo big{
-  font:400;
-  letter-spacing:1px;
+.box .logo big {
+  font: 400;
+  letter-spacing: 1px;
   position: absolute;
-  top:40%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
-.logo big img{
+.logo big img {
   margin-top: 15px;
- width: 70px;
- height: 70px;
- border-radius: 50%;
- 
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
-.box .logo small{
+.box .logo small {
   display: block;
   font-weight: 600;
 }
-.circle .points{
+.circle .points {
   width: 5px;
   height: 10px;
   position: absolute;
   border-radius: 3px;
-  transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
-
+  transform: rotate(calc(var(--i) * var(--rot))) translateY(-45px);
 }
-.points.marked{
+.points.marked {
   animation: glow 0.04s linear forwards;
-  animation-delay: calc(var(--i)*0.05s);
+  animation-delay: calc(var(--i) * 0.05s);
 }
 
 .box .logo img {
   transition: transform 0.3s ease;
 }
 .box .logo:hover img {
-  
   transform: scale(1.2);
 }
-
-
 
 /* right-content */
 
@@ -195,7 +188,7 @@
   background: #fff;
   border-radius: 0px 10px 10px 0px;
   box-shadow: 4px -4px 2px rgb(0, 0, 0, 0.4);
-  min-height: 100vh;
+  min-height: 130vh;
 }
 .experience,
 .education {
@@ -241,14 +234,16 @@
   transition: max-height 0.8s ease;
   position: relative;
   background: white;
-  line-height: 1.5em;
+  line-height: 2.5em;
   max-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .list-project .active {
   max-height: 500px;
 }
-.project-title:hover{
+.project-title:hover {
   cursor: pointer;
 }
 
@@ -303,6 +298,9 @@
   margin-left: 5%;
   padding-left: 30px;
 }
+.about-project span{
+  font-style: normal;
+}
 .project-title:before {
   position: absolute;
   content: "";
@@ -311,50 +309,60 @@
   background: #bbb;
   border-radius: 50%;
   margin-top: 5px;
-  left: calc(5% + -2px);
+  left: calc(4% - -2px );
   margin-top: 16px;
 }
 
 /* education */
-.info-educations ul{
+.info-educations ul {
   display: flex;
   flex-direction: column;
-  gap:20px;
-  
+  gap: 20px;
 }
-.info-educations li{
+.info-educations li {
   width: 100%;
-  margin-left: 20%; 
+  margin-left: 20%;
   display: flex;
   flex-direction: column;
 }
-.university-info .university,.course{
+.university-info .university,
+.course {
   font-size: 24px;
   font-weight: 700;
-  
 }
-.university-info .major{
+.university-info .major {
   margin-left: 30px;
   font-size: 20px;
 }
-.info-educations .unit{
+.info-educations .unit {
   font-style: italic;
   margin-bottom: 16px;
 }
-.university:before,.course::before {
+.university:before,
+.course::before {
   position: absolute;
   content: "";
-  width: 15px;  
+  width: 15px;
   height: 15px;
   background: #bbb;
   border-radius: 50%;
-  margin-left: 80px;
-  
+  margin-left: 65px;
+
   left: calc(5% + -2px);
   margin-top: 8px;
 }
 
 /* @@ */
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
 
 @keyframes toeic {
   0% {
@@ -365,14 +373,183 @@
   }
 }
 
-@keyframes glow{
+@keyframes glow {
   0% {
-    background:rgb(174, 224, 240);
-    
+    background: rgb(174, 224, 240);
   }
   100% {
-    background:rgb(176, 198, 221);
+    background: rgb(176, 198, 221);
     box-shadow: #d4faee;
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    background: lightslategray;
+    min-height: 100vh;
+    margin: 10px 10px;
+  }
+  .profile {
+    width: 300px;
+    height: 300px;
+  }
+  .name {
+    font-size: 30px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  }
+  .career {
+    font-size: 20px;
+    font-style: italic;
+  }
+  .location {
+    position: relative;
+    margin: 0px;
+  }
+  .location ul {
+    display: block;
+    padding: 0px 10px;
+    margin: 0px;
+    padding-bottom: 20px;
+  }
+
+  .info-profile,
+  .content {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+  .content .left-content {
+    box-shadow: none;
+    border-radius: 0px 0px;
+    min-height: 100vh;
+  }
+  .left {
+    min-height: 100vh;
+  }
+  .content .left {
+    position: relative;
+    padding: 0px;
+    
+  }
+
+  .content .right-content {
+    padding-left: 0px;
+    padding-top: 0px;
+    border-radius: 0px;
+    background: #fff;
+    border-radius: none;
+    box-shadow: none;
+  }
+  .project-title:before {
+
+    left: calc(4% - 4px );
+
+}
+}
+@media (max-width: 576px) {
+  .content .left,
+  .content .right {
+    padding: 0px;
+  }
+  .experience,
+  .education {
+    width: 100%;
+  }
+
+  .content .left-content {
+    box-shadow: none;
+    border-radius: 0px 0px;
+    min-height: 140vh;
+  }
+
+  .content .right {
+    position: relative;
+    background: none;
+  }
+  .content .right-content {
+    padding: 0px;
+    background: #fff;
+    border-radius: 0px;
+    background: #fff;
+    padding-left: 10px;
+    box-shadow: none;
+    min-height: 150vh;
+  }
+  .content-experience .project-title span {
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 0px;
+  }
+  .project-title:before {
+    display: none;
+  }
+  .list-project {
+    border-left: none;
+    padding-left: 0px;
+  }
+  .project-feature {
+    display: flex;
+    flex-direction: column;
+  }
+  .experience-item .title-experience,
+  .skills-item .title-skills,
+  .education-item,
+  .title-education,
+  .title-language {
+    font-size: 28px;
+    font-weight: 700;
+    vertical-align: middle;
+  }
+  .project-feature {
+    width: 90%;
+    margin-left: 0px;
+  }
+  .list-project .about-project span {
+    font-size: 16px;
+  }
+  .link-project {
+    font-size: 14px;
+  }
+
+  .content-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hex,
+  .hex:before,
+  .hex:after {
+    height: 28px;
+    width: 16px;
+  }
+  .info-educations li {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .university:before,
+  .course::before {
+    display: none;
+  }
+  .info-educations .university,
+  .course {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(238, 238, 238, 0.7);
+  }
+  .university-info .major {
+    margin-left: 0px;
+    font-size: 16px;
+  }
+  .info-educations ul {
+    padding: 0px;
+  }
+  .content-education {
+    margin-left: 20px;
+    width: 90%;
+  }
+  .info-educations .unit {
+    margin-left: 8px;
+  }
+}

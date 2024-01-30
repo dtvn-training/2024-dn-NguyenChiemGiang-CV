@@ -1,102 +1,142 @@
 .profile {
-    background: rgb(228, 234, 240);
+  background: rgb(228, 234, 240);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+}
+.profile-left {
+  margin: auto;
+}
+
+.profile .profile-image {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.profile .profile-image.zoomed {
+  transform: scale(1.05);
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  object-fit: cover;
+}
+/* right-profile */
+.profile-right {
+  padding: 25px;
+}
+
+.info {
+  height: 100%;
+  border: 5px solid #000;
+  border-radius: 20px;
+  position: relative;
+  animation: slideRight 2.5s ease;
+}
+.name,
+.career {
+  margin: 20px;
+}
+.career span::after {
+  content: "";
+  display: inline-block;
+  width: 220px;
+  margin-left: 20px;
+  border-bottom: 2px solid #000;
+  vertical-align: middle;
+}
+
+.name {
+  font-size: 55px;
+  font-weight: 700;
+  text-shadow: 4px 3px 0px rgba(0, 0, 0, 0.3);
+}
+.career {
+  font-weight: 300;
+  font-size: 30px;
+  font-style: italic;
+}
+.icon img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.location {
+  position: absolute;
+
+  bottom: 0px;
+  background: rgb(50, 56, 70);
+  border-radius: 15px;
+  height: 50%;
+  margin: auto;
+}
+.location ul {
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.location li {
+  flex: 0 0 46%;
+  box-sizing: border-box;
+  padding: 10px;
+  align-items: center;
+
+}
+.location li :hover{
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+}
+.location .text {
+  color: #fff;
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .location {
     position: relative;
-    display: flex;
+  }
+  .profile {
+    background: none;
     flex-direction: column;
     align-items: center;
-    width: 400px;
-    height: 400px;
-    padding: 20px;
-  }
-  .profile-left{
-    margin: auto;
-  }
-  
-  .profile .profile-image {
-    position: relative;
-    margin: auto;
     width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease;
+    height: auto;
+    padding: 10px 0px;
   }
-  
-  .profile .profile-image.zoomed {
-    transform: scale(1.05);
-  }
-  
   .profile img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-    object-fit: cover; 
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
   }
-  /* right-profile */
-  .profile-right {
-    padding: 25px;
-  }
-  .info {
-    height: 100%;
-    border: 5px solid #000;
-    border-radius: 20px;
-    position: relative;
-  }
-  .name,
-  .career {
-    margin: 20px;
-  }
-  .career span::after {
-    content: "";
-    display: inline-block;
-    width: 220px;
-    margin-left: 20px;
-    border-bottom: 2px solid #000;
-    vertical-align: middle;
-  }
-  
-  .name {
-    font-size: 55px;
-    font-weight: 700;
-    text-shadow: 4px 3px 0px rgba(0, 0, 0, 0.3);
-  }
-  .career {
-    font-weight: 300;
-    font-size: 30px;
-    font-style: italic;
-  }
-  .icon img {
-    vertical-align: middle;
-    margin-right: 5px;
-  }
-  .location {
-    position: absolute;
-  
-    bottom: 0px;
-    background: rgb(50, 56, 70);
-    border-radius: 15px;
-    height: 50%;
-    margin: auto;
+  .profile-left {
+    margin-left: 65px;
   }
   .location ul {
-    list-style: none;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    display: block;
+    margin: 0px;
   }
-  
-  .location li {
-    flex: 0 0 46%;
-    box-sizing: border-box;
-    padding: 10px;
-    align-items: center;
+  .name {
+    font-size: 26px;
+    font-weight: 700;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
   }
-  .location .text {
-    color: #fff;
-  }
-
-  @media (max-width: 576px) {
-
-    .location{
-      position: relative;
-    }
-  }
+}

@@ -4,12 +4,11 @@
 }
 body {
   background: lightslategray;
-
   min-height: 100vh;
   margin: 10px 10%;
 }
 .container {
-  min-height: 100vh;
+  min-height: 150vh;
 }
 .info-profile,
 .content {
@@ -23,13 +22,33 @@ body {
 .content {
   min-height: 100vh;
 }
+.left,
+.left-content {
+  min-height: 150vh;
+}
 .info-profile {
   background: rgb(228, 234, 240);
 }
 
 @media (max-width: 576px) {
-  .info-profile{
+  body {
+    background: lightslategray;
+    min-height: 100vh;
+    margin: 10px 0px;
+  }
+  .info-profile {
     display: block;
   }
-
+  .info-profile,
+  .content {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .left,
+  .left-content {
+    min-height: 0vh;
+  }
 }
