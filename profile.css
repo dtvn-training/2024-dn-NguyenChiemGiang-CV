@@ -8,6 +8,7 @@
   height: 400px;
   padding: 20px;
 }
+
 .profile-left {
   margin: auto;
 }
@@ -30,6 +31,7 @@
   border-radius: 50px;
   object-fit: cover;
 }
+
 /* right-profile */
 .profile-right {
   padding: 25px;
@@ -42,10 +44,12 @@
   position: relative;
   animation: slideRight 2.5s ease;
 }
+
 .name,
 .career {
   margin: 20px;
 }
+
 .career span::after {
   content: "";
   display: inline-block;
@@ -60,15 +64,18 @@
   font-weight: 700;
   text-shadow: 4px 3px 0px rgba(0, 0, 0, 0.3);
 }
+
 .career {
   font-weight: 300;
   font-size: 30px;
   font-style: italic;
 }
+
 .icon img {
   vertical-align: middle;
   margin-right: 5px;
 }
+
 .location {
   position: absolute;
 
@@ -78,6 +85,7 @@
   height: 50%;
   margin: auto;
 }
+
 .location ul {
   list-style: none;
   padding: 10px;
@@ -93,26 +101,31 @@
   align-items: center;
 
 }
-.location li :hover{
+
+.location li :hover {
   transform: scale(1.5);
   transition: transform 0.3s ease;
 }
+
 .location .text {
   color: #fff;
 }
+
 @keyframes slideRight {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0);
   }
 }
-
-@media (max-width: 576px) {
+@media (max-width:1024px){
   .location {
     position: relative;
+    height: auto;
   }
+
   .profile {
     background: none;
     flex-direction: column;
@@ -121,22 +134,86 @@
     height: auto;
     padding: 10px 0px;
   }
+
+  .profile img {
+    object-fit: cover;
+  }
+
+  .profile-left {
+    margin-left: 65px;
+  }
+
+  .location ul {
+    display: block;
+    margin: 0px;
+  }
+
+  .name {
+    font-size: 26px;
+    font-weight: 700;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+@media (max-width:768px){
+  .profile {
+    width: 100%; 
+    height: auto;
+}
+.profile-left {
+  margin-left: 0px;
+  padding: 100px 100px 0px 100px;
+}
+.location .text {
+  
+  font-size: 20px;
+}
+.content .left {
+  
+  padding: 0px ;
+  padding-right: 5px;
+}
+
+}
+
+@media (max-width: 576px) {
+  .location {
+    position: relative;
+  }
+
+  .profile {
+    background: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px 0px;
+  }
+
   .profile img {
     width: 80%;
     height: 80%;
     border-radius: 50%;
     object-fit: cover;
   }
+
   .profile-left {
     margin-left: 65px;
   }
+
   .location ul {
     display: block;
     margin: 0px;
   }
+
   .name {
     font-size: 26px;
     font-weight: 700;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
   }
+}
+@media (max-width:480px){
+  .profile {
+    width: 100%; 
+    height: auto;
+}
 }

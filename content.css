@@ -40,6 +40,7 @@
   padding: 5px 16px;
   margin-bottom: 16px;
 }
+
 .about-me-item .title-about,
 .experience-item .title-experience,
 .skills-item .title-skills,
@@ -50,6 +51,7 @@
   font-weight: 700;
   vertical-align: middle;
 }
+
 .content .icon-about-me,
 .icon-experience,
 .icon-skills,
@@ -59,9 +61,11 @@
   flex-direction: column;
   padding: 5px;
 }
+
 .profile .profile-image {
   animation: slideLeft 2.5s ease;
 }
+
 /* left-content */
 .content .left-content {
   padding-left: 10px;
@@ -74,16 +78,20 @@
   box-shadow: -4px -4px 2px rgb(0, 0, 0, 0.4);
   min-height: 130vh;
 }
+
 .content-about-me,
 .content-skills {
   margin-left: 16px;
 }
+
 .content-about-me span {
   font-size: 19px;
 }
+
 .content-language {
   margin-left: 24px;
 }
+
 .content-language .skill-info p {
   font-size: 24px;
   font-weight: 700;
@@ -96,6 +104,7 @@
   align-items: center;
   padding: 0 10px;
 }
+
 .skill-bar .bar {
   width: 90%;
   height: 10px;
@@ -104,6 +113,7 @@
   margin-left: 24px;
   position: relative;
 }
+
 .skill-bar .bar span {
   width: 50%;
   height: 100%;
@@ -113,6 +123,7 @@
   border-radius: 25px;
   box-shadow: #bbb;
 }
+
 .skill-bar .bar .toeic {
   width: 68%;
   animation: toeic 3s;
@@ -124,11 +135,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .box {
   position: relative;
   margin: 10px 0;
   flex: 1 1 15rem;
 }
+
 .circle {
   width: 100%;
   height: 120px;
@@ -136,10 +149,12 @@
   justify-content: center;
   align-items: center;
 }
+
 .box .logo {
   text-align: center;
   font-size: 1rem;
 }
+
 .box .logo big {
   font: 400;
   letter-spacing: 1px;
@@ -148,16 +163,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .logo big img {
   margin-top: 15px;
   width: 70px;
   height: 70px;
   border-radius: 50%;
 }
+
 .box .logo small {
   display: block;
   font-weight: 600;
 }
+
 .circle .points {
   width: 5px;
   height: 10px;
@@ -165,6 +183,7 @@
   border-radius: 3px;
   transform: rotate(calc(var(--i) * var(--rot))) translateY(-45px);
 }
+
 .points.marked {
   animation: glow 0.04s linear forwards;
   animation-delay: calc(var(--i) * 0.05s);
@@ -173,6 +192,7 @@
 .box .logo img {
   transition: transform 0.3s ease;
 }
+
 .box .logo:hover img {
   transform: scale(1.2);
 }
@@ -190,10 +210,12 @@
   box-shadow: 4px -4px 2px rgb(0, 0, 0, 0.4);
   min-height: 130vh;
 }
+
 .experience,
 .education {
   width: fit-content;
 }
+
 .content-experience .project-title {
   margin-bottom: 15px;
   display: flex;
@@ -204,9 +226,11 @@
   height: fit-content;
   border-radius: 15px;
 }
+
 .content-experience .list-project {
   list-style: none;
 }
+
 .list-project {
   display: flex;
   flex-direction: column;
@@ -216,6 +240,7 @@
 .list-project .link-project {
   font-style: italic;
 }
+
 .content-experience .project-title span {
   font-size: 35px;
   font-weight: 700;
@@ -243,6 +268,7 @@
 .list-project .active {
   max-height: 500px;
 }
+
 .project-title:hover {
   cursor: pointer;
 }
@@ -273,6 +299,7 @@
 .hex:before {
   transform: rotate(60deg);
 }
+
 .hex:after {
   transform: rotate(-60deg);
 }
@@ -293,14 +320,17 @@
   margin-left: 10px;
   background: #bbb;
 }
+
 .list-project {
   border-left: 3px solid #bbb;
   margin-left: 5%;
   padding-left: 30px;
 }
-.about-project span{
+
+.about-project span {
   font-style: normal;
 }
+
 .project-title:before {
   position: absolute;
   content: "";
@@ -309,7 +339,7 @@
   background: #bbb;
   border-radius: 50%;
   margin-top: 5px;
-  left: calc(4% - -2px );
+  left: calc(4% - -2px);
   margin-top: 16px;
 }
 
@@ -319,25 +349,30 @@
   flex-direction: column;
   gap: 20px;
 }
+
 .info-educations li {
   width: 100%;
   margin-left: 20%;
   display: flex;
   flex-direction: column;
 }
+
 .university-info .university,
 .course {
   font-size: 24px;
   font-weight: 700;
 }
+
 .university-info .major {
   margin-left: 30px;
   font-size: 20px;
 }
+
 .info-educations .unit {
   font-style: italic;
   margin-bottom: 16px;
 }
+
 .university:before,
 .course::before {
   position: absolute;
@@ -357,6 +392,7 @@
   from {
     transform: translateX(-100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -368,6 +404,7 @@
   0% {
     width: 0%;
   }
+
   100% {
     width: 68%;
   }
@@ -377,10 +414,110 @@
   0% {
     background: rgb(174, 224, 240);
   }
+
   100% {
     background: rgb(176, 198, 221);
     box-shadow: #d4faee;
   }
+}
+
+@media(max-width:1024px) {
+  .content .left-content {
+    box-shadow: none;
+    border-radius: 0px 0px;
+    min-height: 130vh;
+
+
+  }
+
+  .left {
+    min-height: 100vh;
+
+  }
+
+  .content .left {
+    position: relative;
+    padding-left: 0px;
+
+  }
+
+  .content-about-me span {
+    font-size: 15px;
+  }
+
+  .content-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-left: 5px;
+  }
+
+  .content .right-content {
+    padding-left: 0px;
+    padding-top: 0px;
+    border-radius: 0px;
+    background: #fff;
+    border-radius: none;
+    box-shadow: none;
+  }
+
+  .project-title:before {
+
+    left: calc(4% - 10px);
+
+  }
+
+  .location li {
+    padding: 4px;
+
+  }
+
+  .content-experience .project-title span {
+    font-size: 22px;
+  }
+
+  .about-me-item .title-about,
+  .experience-item .title-experience,
+  .skills-item .title-skills,
+  .education-item,
+  .title-education,
+  .title-language {
+    font-size: 28px;
+
+  }
+
+  .university-info .university,
+  .course {
+    font-size: 22px;
+
+  }
+
+  .content .right {
+    padding: 0px 0px;
+
+  }
+
+  .content .right-content {
+
+    padding-top: 20px;
+  }
+
+  .skill-bar .skill-info {
+    padding: 0 0px;
+  }
+
+  .skill-bar .bar {
+    margin-left: 5px;
+  }
+
+  .list-project .about-project span {
+    font-size: 16px;
+  }
+
+  .list-project .link-project {
+    font-size: 12px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -389,22 +526,23 @@
     min-height: 100vh;
     margin: 10px 10px;
   }
-  .profile {
-    width: 300px;
-    height: 300px;
-  }
+
+
   .name {
     font-size: 30px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
   }
+
   .career {
     font-size: 20px;
     font-style: italic;
   }
+
   .location {
     position: relative;
     margin: 0px;
   }
+
   .location ul {
     display: block;
     padding: 0px 10px;
@@ -418,18 +556,19 @@
     width: 100%;
     display: block;
   }
+
   .content .left-content {
     box-shadow: none;
     border-radius: 0px 0px;
     min-height: 100vh;
   }
+
   .left {
     min-height: 100vh;
   }
-  .content .left {
-    position: relative;
-    padding: 0px;
-    
+
+  .content-about-me span {
+    font-size: 28px;
   }
 
   .content .right-content {
@@ -440,57 +579,97 @@
     border-radius: none;
     box-shadow: none;
   }
+
+  .content-skills {
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+
+  .content .right {
+    padding-left: 0px;
+  }
+
+  .right-content .experience,
+  .right-content .education {
+    margin-left: 10px;
+  }
+
+  .content .left {
+    padding: 0px;
+
+  }
+
+
   .project-title:before {
 
-    left: calc(4% - 4px );
+    left: calc(4% - 4px);
 
+  }
+
+  .content-experience .project-title span {
+    font-size: 32px;
+  }
 }
-}
+
 @media (max-width: 576px) {
+
   .content .left,
   .content .right {
     padding: 0px;
   }
+
   .experience,
   .education {
     width: 100%;
   }
 
+
   .content .left-content {
     box-shadow: none;
     border-radius: 0px 0px;
-    min-height: 140vh;
+    min-height: 108vh;
   }
 
   .content .right {
     position: relative;
     background: none;
   }
+
   .content .right-content {
     padding: 0px;
     background: #fff;
     border-radius: 0px;
     background: #fff;
-    padding-left: 10px;
+    padding-left: 0px;
     box-shadow: none;
     min-height: 150vh;
   }
+  .content .about-me-item, .experience-item, .skills-item, .education-item, .language-item {
+
+    width: 96%;
+}
+
   .content-experience .project-title span {
     font-size: 24px;
     font-weight: 700;
     border-radius: 0px;
   }
+
   .project-title:before {
     display: none;
   }
+
   .list-project {
     border-left: none;
     padding-left: 0px;
   }
+
   .project-feature {
     display: flex;
     flex-direction: column;
   }
+
   .experience-item .title-experience,
   .skills-item .title-skills,
   .education-item,
@@ -500,13 +679,16 @@
     font-weight: 700;
     vertical-align: middle;
   }
+
   .project-feature {
     width: 90%;
     margin-left: 0px;
   }
+
   .list-project .about-project span {
     font-size: 16px;
   }
+
   .link-project {
     font-size: 14px;
   }
@@ -515,22 +697,26 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   .hex,
   .hex:before,
   .hex:after {
     height: 28px;
     width: 16px;
   }
+
   .info-educations li {
     width: 100%;
     margin-left: 0;
     display: flex;
     flex-direction: column;
   }
+
   .university:before,
   .course::before {
     display: none;
   }
+
   .info-educations .university,
   .course {
     padding: 5px;
@@ -538,18 +724,31 @@
     font-size: 16px;
     background: rgba(238, 238, 238, 0.7);
   }
+
   .university-info .major {
     margin-left: 0px;
     font-size: 16px;
   }
+
   .info-educations ul {
     padding: 0px;
   }
+
   .content-education {
     margin-left: 20px;
     width: 90%;
   }
+
   .info-educations .unit {
     margin-left: 8px;
   }
+
+
+}
+
+@media (max-width:480px) {
+  .content .left-content {
+    min-height: 108vh;
+  }
+
 }
